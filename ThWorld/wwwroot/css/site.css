@@ -58,9 +58,20 @@ input[type=text], input[type=password], textarea {
     overflow: hidden;
     left: 0; /*shown at the left side of the page*/
     margin: 0;
+    transition: left ease .25s;
 }
+ 
+    #sidebar.hide-sidebar {
+        left: -250px;
+        transition: left ease .25s; /*an animation for toggling the side bar*/
+    }
 
 #wrapper {
     margin: 0 0 0 250px; /*push over 250px due to sidebar being fixed 250px*/
-
+    transition: margin-left ease .25s;
 }
+
+    #wrapper.hide-sidebar {
+        margin-left: 0;
+        transition: margin-left ease .25s;
+    }
